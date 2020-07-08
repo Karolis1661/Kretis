@@ -1,0 +1,8 @@
+{% load static %}
+   <section class="clients">
+        <div class="client-logo">
+            {% for client in clients %}
+            <div class="client"><img src="{{client}}" alt=""></div>
+            {% endfor %}
+        </div>
+</section>

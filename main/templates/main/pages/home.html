@@ -1,0 +1,119 @@
+{% extends '../base/base.html' %}
+
+
+{% load static %}
+{% block bodyclass %} <body class="home-section"></body> {% endblock bodyclass %}
+{% block content %}
+
+    <section class="landing">
+                <div class="landing-descr">
+                    <p class="landing-title">
+                        Pažangūs skaitmeniniai sprendimai verslui
+                    </p>
+                    <p class="landing-text">Internetinių svetainių, elektroninių
+                        parduotuvių ir skaitmeninio dizaino kūrimo profesionalai
+                    </p>
+                </div>
+                <div class="landing-btns">
+                    <div class="konsultacija-btn"><a href="">Konsultacija</a></div>
+                    <div class="skaiciuoti-btn"><a href="{% url 'calculator' %}">Skaičiuoti kainą</a></div>
+                </div>
+
+        <div class="landing-img" style="background-image: url('{% static 'main/images/home/home_landing.jpg' %}');" alt=""></div>
+            </section>
+
+    <section class="services">
+                <div class="service">
+                    <img class="service-icon" src="{% static 'main/icons/home/is_icon.svg' %}" alt="">
+                    <p class="service-title">Internetinės svetainės</p>
+                    <p class="service-text">
+                        Mes padėsime jūsų skaitmeninėje
+                        erdvėje atrodyti rimtai ir patikimai.
+                    </p>
+                    <div class="service-link">
+                        <a href="" >Išsamiau</a>
+                        <img src="{% static 'main/home_page/f_arrow.svg' %}" alt="">
+                    </div>
+                </div>
+                <div class="service">
+                    <img class="service-icon" src="{% static 'main/icons/home/ep_icon.svg' %}" alt="">
+                    <p class="service-title">Elektroninės parduotuvės</p>
+                    <p class="service-text">
+                        Norite prekiauti internete, o gal jau prekiaujate ir
+                        norite atsinaujinti?
+                    </p>
+                    <div class="service-link">
+                        <a href="#" >Išsamiau</a>
+                        <img src="{% static 'main/home_page/f_arrow.svg' %}" alt="">
+                    </div>
+                </div>
+                <div class="service">
+                    <img class="service-icon" src="{% static 'main/icons/home/d_icon.svg' %}" alt="">
+                    <p class="service-title">Internetinių svetainių dizainas</p>
+                    <p class="service-text">
+                        Sukursime unikalų jūsų svetainės ar elektroninės parduotuvės dizainą
+                    </p>
+                    <div class="service-link">
+                        <a href="#" >Išsamiau</a>
+                        <img src="{% static 'main/home_page/f_arrow.svg' %}" alt="">
+                    </div>
+                </div>
+            </section>
+
+    <section class="portfolio">
+                <div class="portfolio-descr">
+                    <p class="portfolio-title">
+                        Dalinamės keleta mūsų įgyvendintų projektų
+                    </p>
+                    <p class="portfolio-text">
+                        Nors esame jauna įmonė - turime didele patirtį srityje
+                        kurios paslaugas siūlome. Nori pradėti verslą ar atnaujinti
+                        internetinę svetainę?
+                    </p>
+                </div>
+                <div class="portfolio-btns">
+                    <div class="p-darbu-btn"><a href="{% url 'projects' %}">daugiau darbų</a></div>
+                    <div class="p-konsultacija-btn"><a href="#">konsultacija</a></div>
+                </div>
+
+                <div class="portfolio-img-holder">
+                    {% for image in port_img %}
+                    <div class="p-img display-off" style="background-image: url('{{image}}');"></div>
+                    {% endfor %}
+                </div>
+                <div class="p-img-btn">
+                    <img src="{% static 'main/home_page/p-arrow.svg' %}" class="p-btn-larrow"></img>
+                    <img src="{% static 'main/home_page/p-arrow.svg' %}" class="p-btn-rarrow"></img>
+                </div>
+            </section>
+
+    <section class="advices">
+
+        <div class="adv-intro">
+                    <p class="adv-intro-title">Patarimai</p>
+                    <div class="adv-link">
+                        <a href="{% url 'articles' %}">Visi straipsniai</a>
+                        <img src="{% static 'main/home_page/f_arrow.svg' %}" alt="">
+                    </div>
+
+                </div>
+
+        <div class="advices-container">
+                    {% for article in home_articles %}
+                    <a href="{% url 'single_article' article.url %}">
+                        <div class="advice">
+                        <div class="adv-img" style="background-image: url('{{article.cover.url}}');"></div>
+                        <p class="adv-date"> {{article.date}} </p>
+                        <p class="adv-title"> {{article.title}} </p>
+                        <p class="adv-text"> {{article.content |truncatechars:65 }} </p>
+                    </div>
+                    </a>
+                    {% endfor %}
+                </div>
+
+    </section>
+
+    {% include '../base/clients.html' %}
+
+
+{% endblock content %}

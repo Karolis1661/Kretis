@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="22px" height="15px" viewBox="0 0 22 15" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.6 (67491) - http://www.bohemiancoding.com/sketch -->
+    <title>Hamburger mygtukas</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Desktop" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Pagrindinis-puslapis" transform="translate(-1335.000000, -28.000000)" fill="#4A62B5">
+            <g id="Navigacijos-juosta">
+                <g id="Hamburger-mygtukas" transform="translate(1335.000000, 28.000000)">
+                    <g id="Group-12">
+                        <path d="M21.140625,7 L0.859375,7 C0.384742187,7 0,7.4477 0,8 C0,8.5523 0.384742187,9 0.859375,9 L21.140625,9 C21.6152578,9 22,8.5523 22,8 C22,7.4477 21.6152578,7 21.140625,7 Z" id="Path1"></path>
+                        <path d="M21.140625,0 L0.859375,0 C0.384742187,0 0,0.4477 0,1 C0,1.5523 0.384742187,2 0.859375,2 L21.140625,2 C21.6152578,2 22,1.5523 22,1 C22,0.4477 21.6152578,0 21.140625,0 Z" id="Path2"></path>
+                        <path d="M21.140625,13 L0.859375,13 C0.384742187,13 0,13.4477 0,14 C0,14.5523 0.384742187,15 0.859375,15 L21.140625,15 C21.6152578,15 22,14.5523 22,14 C22,13.4477 21.6152578,13 21.140625,13 Z" id="Path3"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

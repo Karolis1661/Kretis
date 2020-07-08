@@ -1,0 +1,97 @@
+{% extends '../base/base.html' %}
+
+
+{% load static %}
+{% block bodyclass %} <body class="atlikti-darbai-section"></body> {% endblock bodyclass %}
+{% block content %}
+  <div class="ad-url">
+        <p><a href="{% url 'home_page' %}">Pagrindinis</a> / <a href="{% url 'projects' %}">Įgyvendinti projektai</a> /
+          {{single.client}}</p>
+    </div>
+
+    <section class="ad-landing">
+        <div class="ad-intro">
+                    <p id="ad-title">{{single.inside_title}}</p>
+                    <p id="ad-text">
+                      {{single.inside_text}}
+                    </p>
+                    <p id="ad-items-title">Atlikti darbai:</p>
+                    <ul id="ad-items">
+                      {% if single.a_1 %}
+                        <li class="ad-item">
+                            <img class="ad-item-logo" src="{% static 'main/home_page/reactangle.svg' %}" alt="">
+                            <p class="ad-item-text">{{single.a_1}}</p>
+                        </li>
+                      {% endif %}
+                        {% if single.a_2 %}
+                        <li class="ad-item">
+                            <img class="ad-item-logo" src="{% static 'main/home_page/reactangle.svg' %}" alt="">
+                            <p class="ad-item-text">{{single.a_2}}</p>
+                        </li>
+                      {% endif %}
+                       {% if single.a_3 %}
+                        <li class="ad-item">
+                            <img class="ad-item-logo" src="{% static 'main/home_page/reactangle.svg' %}" alt="">
+                            <p class="ad-item-text">{{single.a_3}}</p>
+                        </li>
+                      {% endif %}
+                        {% if single.a_4 %}
+                        <li class="ad-item">
+                            <img class="ad-item-logo" src="{% static 'main/home_page/reactangle.svg' %}" alt="">
+                            <p class="ad-item-text">{{single.a_4}}</p>
+                        </li>
+                      {% endif %}
+
+                    </ul>
+        </div>
+        <div class="ad-img" style="background-image: url('{{ single.inside_intro_image.url}}');"> </div>
+    </section>
+<section class="ad-tools">
+        {% if single.tech_stack_1 %}
+            <div class="ad-tool" ><img class="ad-logo" src="{{single.tech_stack_1.url}}" alt=""></div>
+        {% endif %}
+        {% if single.tech_stack_2 %}
+            <div class="ad-tool" ><img class="ad-logo" src="{{single.tech_stack_2.url}}" alt=""></div>
+        {% endif %}
+        {% if single.tech_stack_3 %}
+            <div class="ad-tool" ><img class="ad-logo" src="{{single.tech_stack_3.url}}" alt=""></div>
+        {% endif %}
+        {% if single.tech_stack_4 %}
+            <div class="ad-tool" ><img class="ad-logo" src="{{single.tech_stack_4.url}}" alt=""></div>
+        {% endif %}
+        {% if single.tech_stack_5 %}
+            <div class="ad-tool" ><img class="ad-logo" src="{{single.tech_stack_5.url}}" alt=""></div>
+        {% endif %}
+    </section>
+
+    <section class="ad-images">
+        {% if single.project_image_1 %}
+        <div class="ad-image" style="background-image: url('{{single.project_image_1.url}}');"></div>
+        {% endif %}
+        {% if single.project_image_2 %}
+        <div class="ad-image" style="background-image: url('{{single.project_image_2.url}}');"></div>
+        {% endif %}
+        {% if single.project_image_3 %}
+        <div class="ad-image" style="background-image: url('{{single.project_image_3.url}}');"></div>
+        {% endif %}
+    </section>
+
+  <section class="ad-writeup">
+        <img id="writeup-logo" src="{% static 'main/is_page/kabutes.svg' %}" alt="">
+        <p id="writeup-text">{{single.write_up}}
+        </p>
+        <p id="writeup-owner">{{single.owner_name}}</p>
+        <p id="writeup-company">{{single.company}}</p>
+    </section>
+
+    <section class="switch-proj">
+
+        <div class="proj-link"><p>{{single.project_url}}</p></div>
+
+    </section>
+
+
+  {% include '../base/promo.html' %}
+    {% include '../base/clients.html' %}
+
+{% endblock content %}

@@ -1,0 +1,31 @@
+{% block promo %}
+
+    <span id="p-1"></span>
+    <span id="p-2"></span>
+
+    <section class="promo">
+                <div class="promo-items">
+                    <p id="promo-title">
+                        Reikalingas internetinės svetainės
+                        sukūrimas ar atnaujinimas?
+                    </p>
+                    <p id="promo-text">
+                        Pasinaudokite nemokama konsultaciją ir mūsų komandos
+                        specialistai susisieks su jumis 24 valandų laikotarpyje.
+                    </p>
+                    <div class="promo-btns">
+                        <div class="promo-btn1">
+                            <a href="">
+                                <p>Nemokama konsultacja</p>
+                            </a>
+                        </div>
+                        <div class="promo-btn2">
+                            <a href="{% url 'calculator' %}">
+                                <p>preliminari kaina</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+    </section>
+
+{% endblock promo %}

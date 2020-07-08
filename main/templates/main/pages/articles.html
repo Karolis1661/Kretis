@@ -1,0 +1,63 @@
+{% extends '../base/base.html' %}
+
+
+{% load static %}
+{% block bodyclass %} <body class="articles-section"></body> {% endblock bodyclass %}
+{% block content %}
+
+    <section class="a-intro-items">
+                <p id="a-i-title">Straipsniai</p>
+                <ul class="article-links">
+                    <li class="article-link">
+                        <img  src="{% static 'main/home_page/f_arrow.svg' %}" alt="">
+                        <a id="v-s" href="{% url 'articles' %}">Visi straipsniai</a>
+                    </li>
+                     <li class="article-link" >
+
+                         <form>
+                             <img src="{% static 'main/home_page/f_arrow.svg' %}" alt="">
+                            <input class="a-link" name="q" type="submit" value="Internetinės svetainės">
+                         </form>
+                    </li>
+                    <li class="article-link">
+
+                        <form>
+                            <img src="{% static 'main/home_page/f_arrow.svg' %}" alt="">
+                            <input class="a-link" name="q" type="submit" value="Elektroninės parduotuvės">
+                         </form>
+                    </li>
+                    <li class="article-link">
+
+                        <form>
+                            <img src="{% static 'main/home_page/f_arrow.svg' %}" alt="">
+                            <input class="a-link" name="q" type="submit" value="Internetinių svetainių dizainas">
+                         </form>
+
+                    </li>
+                </ul>
+            </section>
+    <section class="articles">
+        {% for article in all_articles %}
+        <a href="{% url 'single_article' article.url %}">
+            <div class="article">
+                <div class="art-img" style="background-image: url('{{article.cover.url}}');"></div>
+                    <p class="art-date">{{article.date}}</p>
+                    <p class="art-title">{{article.title}}</p>
+                    <p class="art-text">{{article.content | truncatechars:65 }} </p>
+            </div>
+        </a>
+        {% endfor %}
+    </section>
+    <section class="article-btns">
+        {% for i in all_articles.paginator.page_range %}
+            {% if all_articles.number == i %}
+                <div class="article-btn" style="background-color:green;">{{ i }}</div>
+            {% else %}
+                <a href="?page={{ i }}"><div class="article-btn">{{ i }}</div></a>
+            {% endif %}
+        {% endfor %}
+    </section>
+
+    {% include '../base/clients.html' %}
+
+{% endblock content %}

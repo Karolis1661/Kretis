@@ -1,0 +1,125 @@
+{% extends '../base/base.html' %}
+
+
+{% load static %}
+{% block bodyclass %} <body class="is-section"></body> {% endblock bodyclass %}
+{% block content %}
+
+        <section class="landing">
+                <div class="landing-descr">
+                    <p class="landing-title">
+                        Internetinių svetainių dizaino kūrimas
+                    </p>
+                    <p class="landing-text">
+                        Siūlome unikalius internetinių svetainių sprendimus
+                        įmonėms. Suteikite savo verslui tinkamą įvaizdį internetinėje
+                        erdvėje.
+                    </p>
+                </div>
+                <div class="landing-btns">
+                    <div class="konsultacija-btn"><a href="{% url 'projects' %}">Mūsų darbai</a></div>
+                    <div class="skaiciuoti-btn"><a href="{% url 'calculator' %}">Skaičiuoti kainą</a></div>
+                </div>
+
+                <div class="landing-img" style="background-image: url({% static 'main/images/svetaines/dizainas_landing.jpg' %});"> </div>
+    </section>
+
+    <section class="procedures">
+                <div class="procedure">
+                    <img class="procedure-icon" src="{% static 'main/icons/svetaines/poreikis_icon.svg' %}" alt="">
+                    <p class="procedure-title">01. Poreikis</p>
+                    <p class="procedure-text">
+                    Išsami kliento pateiktos informacijos, pagrindiniu konkurentų
+                    ir galimų problemų analizė
+                    </p>
+                </div>
+
+                <div class="procedure">
+                    <img class="procedure-icon" src="{% static 'main/icons/svetaines/analize_icon.svg' %}" alt="">
+                    <p class="procedure-title">02. Analize</p>
+                    <p class="procedure-text">
+                        Surinktos informacijos architektūra, prioritetų nustatymas ir
+                        internetinės svetainės struktūros kūrimas
+                    </p>
+                </div>
+
+                <div class="procedure">
+                    <img class="procedure-icon" src="{% static 'main/icons/svetaines/architektura_icon.svg' %}" alt="">
+                    <p class="procedure-title">03. Architektūra</p>
+                    <p class="procedure-text">
+                        Unikalaus internetinės svetainės dizaino kūrimas ir jo pritaikymas
+                        įvairioms ekranų rezoliucijoms
+                    </p>
+                </div>
+
+                <div class="procedure">
+                    <img class="procedure-icon" src="{% static 'main/icons/svetaines/struktura_icon.svg' %}" alt="">
+                    <p class="procedure-title">04. Struktūra</p>
+                    <p class="procedure-text">
+                        Sukuriami keli skirtingi internetinės svetainės dizaino prototipai
+                        peržiūrai įvairiuose įrenginiuose
+                    </p>
+                </div>
+
+                <div class="procedure">
+                    <img class="procedure-icon" src="{% static 'main/icons/svetaines/dizainas_icon.svg' %}" alt="">
+                    <p class="procedure-title">05. Dizainas</p>
+                    <p class="procedure-text">
+                        Front-end ir back-end programavimo darbai. Sukuriama unikali turinio
+                        valdymo sistema
+                    </p>
+                </div>
+
+                <div class="procedure">
+                    <img class="procedure-icon" src="{% static 'main/icons/svetaines/prototipas_icon.svg' %}" alt="">
+                    <p class="procedure-title">06. Prototipas</p>
+                    <p class="procedure-text">
+                        Pilnai ištestavus svetainę, sukėlus visą informaciją ir sutikrinus
+                        atliktus darbus paleidžiame internetinę svetainę.
+                    </p>
+                </div>
+    </section>
+
+    <section class="about-1">
+        <div class="about-1-img" style="background-image: url({% static 'main/images/svetaines/parduotuves_dizainas.jpg' %});"> </div>
+                <div class="about-1-descr">
+                    <p class="a-1-title">Sprendžiame realias problemas</p>
+                    <p class="a-1-text">
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Alias eius molestiae,
+                        eligendi numquam delectus eveniet iusto possimus eaque
+                        odio nam atque corporis officia veniam deleniti! Sunt laudantium iste beatae aut.
+                    </p>
+                </div>
+    </section>
+
+    <section class="about-2">
+        <div class="about-2-img" style="background-image: url({% static 'main/images/svetaines/svetaines_dizainas.jpg' %});"> </div>
+                <div class="about-2-descr">
+                    <p class="a-2-title">Interaktyvūs sprendimai kiekvienam įrenginiui</p>
+                    <p class="a-2-text">
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Alias eius molestiae,
+                        eligendi numquam delectus eveniet iusto possimus eaque
+                        odio nam atque corporis officia veniam deleniti! Sunt laudantium iste beatae aut.
+                    </p>
+                </div>
+    </section>
+
+    <section class="about-3">
+        <div class="about-3-img" style="background-image: url({% static 'main/images/svetaines/prototipas.jpg' %});"> </div>
+                <div class="about-3-descr">
+                    <p class="a-3-title">Interaktyvus prototipas produkto testavimui</p>
+                    <p class="a-3-text">
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Alias eius molestiae,
+                        eligendi numquam delectus eveniet iusto possimus eaque
+                        odio nam atque corporis officia veniam deleniti! Sunt laudantium iste beatae aut.
+                    </p>
+                </div>
+    </section>
+
+
+
+    {% include '../base/promo.html' %}
+
+    {% include '../base/clients.html' %}
+
+{% endblock content %}

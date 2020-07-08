@@ -1,0 +1,44 @@
+{% extends '../base/base.html' %}
+
+
+{% load static %}
+{% block bodyclass %} <body class="darbai-section"></body> {% endblock bodyclass %}
+{% block content %}
+
+    <section class="landing">
+                <div class="landing-descr">
+                    <p class="landing-title">
+                        Keletas mūsų komandos įgyvendintų projektų
+                    </p>
+                    <p class="landing-text">
+                        Siūlome unikalius internetinių svetainių sprendimus
+                        įmonėms. Suteikite savo verslui tinkamą įvaizdį internetinėje
+                        erdvėje.
+                    </p>
+                </div>
+                <div class="landing-img" style="background-image: url('{% static 'main/home_page/landing.png' %}');"> </div>
+    </section>
+
+    <section class="done-projects">
+        {% for project in projects %}
+            {% if project %}
+                <div class="project">
+              <div class="proj-intro">
+                  <p id="proj-type">{{project.project_type}}</p>
+                  <p id="proj-title">{{project.intro_title}}</p>
+                  <p id="proj-text">
+                      {{project.intro_text}}
+                  </p>
+                 <span id="proj-btn"><a href="{% url 'single_project' project.client %}"><p>Peržiūrėti</p></a></span>
+              </div>
+            <a href="{% url 'single_project' project.client %}" class="proj-img">  <div class="test" style="background-image: url('{{ project.intro_image.url}}');"> </div> </a>
+          </div>
+            {% endif %}
+        {% endfor %}
+</section>
+
+
+    {% include '../base/promo.html' %}
+    {% include '../base/clients.html' %}
+
+{% endblock content %}

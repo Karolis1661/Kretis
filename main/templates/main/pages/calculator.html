@@ -1,0 +1,315 @@
+{% extends '../base/base.html' %}
+
+
+{% load static %}
+{% block bodyclass %} <body class="calculator-section"></body> {% endblock bodyclass %}
+{% block content %}
+
+    <section class="intro">
+                <p id="intro-title">Preliminari kainos skaičiuoklė</p>
+                <p id="intro-text">
+                    Pasirinkite norimą paslaugą, pridėkit papildomus funkcionalumus pagal savo
+                    poreikius. Kaina nurodoma preliminari, tikslią kainą galime pasakyti sudarius tikslų
+                    projekto aprašymą.
+                </p>
+    </section>
+
+    <section class="calc-container">
+
+                <div class="calculator web-calculator">
+                    <div class="calc-type">
+                        <img class="c-type-logo" src="{% static 'main/icons/home/is_icon.svg' %}" alt="">
+                        <p class="c-type-title">Internetinė svetainė</p>
+                        <div class="m-switch"></div>
+
+                    </div>
+                    <div class="calc-items m-flag">
+
+
+                    <div class="form-title">
+                        <p>Pasirinkite funkcionalumus</p>
+                    </div>
+
+                    <form class="calc-form" action="{% url 'calculator' %}" method="post">
+                        {% csrf_token %}
+                        <p class="web web-form">
+
+                        {{form.web_locked_uisd}}
+                        {{form.web_locked_uisd.label_tag}}
+
+                        {{form.web_locked_tvs}}
+                        {{form.web_locked_tvs.label_tag}}
+
+                        {{form.web_locked_sti}}
+                        {{form.web_locked_sti.label_tag}}
+
+                        {{form.web_locked_iz}}
+                        {{form.web_locked_iz.label_tag}}
+
+                        {{form.web_locked_uz}}
+                        {{form.web_locked_uz.label_tag}}
+
+                        {{form.web_locked_seo}}
+                        {{form.web_locked_seo.label_tag}}
+
+                        {{form.web_locked_gai}}
+                        {{form.web_locked_gai.label_tag}}
+
+
+                        {{form.web_optional_fpi}}
+                        {{form.web_optional_fpi.label_tag}}
+
+                        {{form.web_pages_select}}
+
+                        {{form.web_optional_pk}}
+                        {{form.web_optional_pk.label_tag}}
+
+                        {{form.web_optional_pf}}
+                        {{form.web_optional_pf.label_tag}}
+
+                        {{form.web_optional_d}}
+                        {{form.web_optional_d.label_tag}}
+
+                        {{form.web_optional_lc}}
+                        {{form.web_optional_lc.label_tag}}
+
+                        {{form.web_optional_st}}
+                        {{form.web_optional_st.label_tag}}
+                    </p>
+
+                    <div class="web-final-form display-off">
+                        <span ><img id="hidden-form-btn" src="{% static 'main/home_page/x.svg' %}" alt=""></span>
+                        <p class="hidden-form-title">Užklausos forma</p>
+
+                        <p class="hidden-form-text">
+                            Suveskite savo kontaktinę informaciją. Jeigu jau vykdote veiklą ir norite atnaujinti svetainę
+                            ar elektroninę parduotuvę - nurodykite adresą. Susisieksime su jumis per 24 valandas darbo dienomis.
+                        </p>
+                        {{form.first_name}}
+                        {{form.last_name}}
+                        {{form.email}}
+                        {{form.phone_number}}
+
+                        {{form.web_firm}}
+                        {{form.web_website}}
+
+                        {{form.text}}
+
+                        <div class="h-agreement">
+                            {{form.check}}
+                            <p>Sutinku su jųsū <a href="">Privatmo politiką</a></p>
+                        </div>
+                         <div class="hidden-form-contact">
+                            <p >Iškilus klausimams - kreipkitės telefonu.</p>
+                            <p class="h-nr">+370 638 22 675</p>
+                        </div>
+                        <button type="submit" class="form-agreement-btn"><p>Siųsti užklausą</p></button>
+
+
+
+
+                    </div>
+
+                    </form>
+
+                    <div class="price-output">
+                        <p class="p-o-title">Preliminari internetinės svetainės kaina</p>
+                        <p id="web-form-final">-</p>
+                    </div>
+
+                    <div class="web-redirect-btn d-flag">
+                        <span class="btn" id="w-btn"><p>Siųsti užklausą</p></span>
+                    </div>
+                    </div>
+                </div>
+
+                <div class="calculator eshop-calculator ">
+                    <div class="calc-type">
+                        <img class="c-type-logo"src="{% static 'main/icons/home/ep_icon.svg' %}" alt="">
+                        <p class="c-type-title">Elektroninė parduotuvė</p>
+                        <div class="m-switch"></div>
+
+                    </div>
+                    <div class="calc-items m-flag">
+                        <div class="form-title">
+                            <p>Pasirinkite funkcionalumus</p>
+                        </div>
+
+                        <form class="calc-form e-calc-form" action="{% url 'calculator' %}" method="post">
+                            {% csrf_token %}
+                            <p class="eshop eshop-form">
+                                {{e_form.eshop_locked_uisd}}
+                                {{e_form.eshop_locked_uisd.label_tag}}
+
+                                {{e_form.eshop_tvs_choices}}
+
+                                {{e_form.eshop_locked_tvs}}
+                                {{e_form.eshop_locked_tvs.label_tag}}
+
+                                {{e_form.eshop_locked_sti}}
+                                {{e_form.eshop_locked_sti.label_tag}}
+
+                                {{e_form.eshop_locked_iz}}
+                                {{e_form.eshop_locked_iz.label_tag}}
+
+                                {{e_form.eshop_locked_uz}}
+                                {{e_form.eshop_locked_uz.label_tag}}
+
+                                {{e_form.eshop_locked_seo}}
+                                {{e_form.eshop_locked_seo.label_tag}}
+
+                                {{e_form.eshop_locked_gai}}
+                                {{e_form.eshop_locked_gai.label_tag}}
+
+                                {{e_form.eshop_locked_fpi}}
+                                {{e_form.eshop_locked_fpi.label_tag}}
+
+                                {{e_form.eshop_locked_pk}}
+                                {{e_form.eshop_locked_pk.label_tag}}
+
+                                {{e_form.eshop_locked_pf}}
+                                {{e_form.eshop_locked_pf.label_tag}}
+
+                                {{e_form.eshop_optional_d}}
+                                {{e_form.eshop_optional_d.label_tag}}
+
+                                {{e_form.eshop_optional_lc}}
+                                {{e_form.eshop_optional_lc.label_tag}}
+
+                                {{e_form.eshop_optional_st}}
+                                {{e_form.eshop_optional_st.label_tag}}
+                            </p>
+                            <div class="eshop-final-form display-off">
+                                <span ><img id="e-hidden-form-btn" src="{% static 'main/home_page/x.svg' %}" alt=""></span>
+                                <p class="hidden-form-title">Užklausos forma</p>
+
+                                <p class="hidden-form-text">
+                                    Suveskite savo kontaktinę informaciją. Jeigu jau vykdote veiklą ir norite atnaujinti svetainę
+                                    ar elektroninę parduotuvę - nurodykite adresą. Susisieksime su jumis per 24 valandas darbo dienomis.
+                                </p>
+                                {{e_form.eshop_first_name}}
+                                {{e_form.eshop_last_name}}
+                                {{e_form.eshop_email}}
+                                {{e_form.eshop_phone_number}}
+                                {{e_form.eshop_firm}}
+                                {{e_form.eshop_website}}
+                                {{e_form.eshop_text}}
+                                <div class="h-agreement">
+                                    {{e_form.eshop_check}}
+                                    <p>Sutinku su jųsū <a href="">Privatmo politiką</a></p>
+                                </div>
+                                <div class="hidden-form-contact">
+                                    <p >Iškilus klausimams - kreipkitės telefonu.</p>
+                                    <p class="h-nr">+370 638 22 675</p>
+                                </div>
+                                <button type="submit" class="form-agreement-btn"><p>Siųsti užklausą</p></button>
+
+                            </div>
+                        </form>
+
+                        <div class="price-output">
+                            <p class="p-o-title">Preliminari internetinės svetainės kaina</p>
+                            <p id="eshop-form-final">-</p>
+                        </div>
+
+                        <div class="eshop-redirect-btn d-flag">
+                            <span class="btn" id="e-btn"><p>Siųsti užklausą</p></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="calculator design-calculator ">
+                    <div class="calc-type">
+                        <img class="c-type-logo"src="{% static 'main/icons/home/d_icon.svg' %}" alt="">
+                        <p class="c-type-title">Internetinės svetainės dizainas</p>
+                        <div class="m-switch"></div>
+
+                    </div>
+                    <div class="calc-items m-flag">
+
+                        <div class="form-title">
+                            <p>Pasirinkite funkcionalumus</p>
+                        </div>
+
+                        <form class="calc-form d-calc-form " action="{% url 'calculator' %}" method="post">
+                            {% csrf_token %}
+                            <p class="design design-form" >
+                                {{d_form.design_website_type}}
+
+                                {{d_form.design_website_pages}}
+
+                                {{d_form.design_locked_paitn}}
+                                {{d_form.design_locked_paitn.label_tag}}
+
+                                {{d_form.design_locked_kait}}
+                                {{d_form.design_locked_kait.label_tag}}
+
+                                {{d_form.design_locked_sia}}
+                                {{d_form.design_locked_sia.label_tag}}
+
+                                {{d_form.design_locked_ssk}}
+                                {{d_form.design_locked_ssk.label_tag}}
+
+                                {{d_form.design_locked_dke}}
+                                {{d_form.design_locked_dke.label_tag}}
+
+                               {{d_form.design_locked_dmie}}
+                                {{d_form.design_locked_dmie.label_tag}}
+
+                                {{d_form.design_locked_dpe}}
+                                {{d_form.design_locked_dpe.label_tag}}
+
+                                {{d_form.design_locked_pk}}
+                                {{d_form.design_locked_pk.label_tag}}
+
+                                {{d_form.design_optional_tidt}}
+                                {{d_form.design_optional_tidt.label_tag}}
+
+                                {{d_form.design_testing_cycle}}
+                            </p>
+                            <div class="design-final-form display-off">
+                                <span ><img id="d-hidden-form-btn" src="{% static 'main/home_page/x.svg' %}" alt=""></span>
+                                <p class="hidden-form-title">Užklausos forma</p>
+
+                                <p class="hidden-form-text">
+                                    Suveskite savo kontaktinę informaciją. Jeigu jau vykdote veiklą ir norite atnaujinti svetainę
+                                    ar elektroninę parduotuvę - nurodykite adresą. Susisieksime su jumis per 24 valandas darbo dienomis.
+                                </p>
+                                {{d_form.design_first_name}}
+                                {{d_form.design_last_name}}
+                                {{d_form.design_email}}
+                                {{d_form.design_phone_number}}
+                                {{d_form.design_firm}}
+                                {{d_form.design_website}}
+                                {{d_form.design_text}}
+                                <div class="h-agreement">
+                                    {{d_form.design_check}}
+                                    <p>Sutinku su jųsū <a href="">Privatmo politiką</a></p>
+                                </div>
+                                <div class="hidden-form-contact">
+                                    <p >Iškilus klausimams - kreipkitės telefonu.</p>
+                                    <p class="h-nr">+370 638 22 675</p>
+                                </div>
+                                <button type="submit" class="form-agreement-btn"><p>Siųsti užklausą</p></button>
+
+                            </div>
+                        </form>
+
+                        <div class="price-output">
+                            <p class="p-o-title">Preliminari internetinės svetainės kaina</p>
+                            <p id="design-form-final">-</p>
+                        </div>
+
+                        <div class="design-redirect-btn d-flag">
+                            <span class="btn" id="d-btn"><p>Siųsti užklausą</p></span>
+                        </div>
+
+                    </div>
+                </div>
+    </section>
+
+
+    {% include '../base/clients.html' %}
+    {% include '../base/promo.html' %}
+
+{% endblock content %}

@@ -1,0 +1,40 @@
+{% extends '../base/base.html' %}
+
+
+{% load static %}
+{% block bodyclass %} <body class="straipsnis-section"></body> {% endblock bodyclass %}
+{% block content %}
+
+    <section class="article-section">
+
+        <div class="whole-article">
+            <div class="whole-cover" style="background-image: url('{{single.cover.url}}');"></div>
+            <p id="article-date">{{single.date}}</p>
+            <p id="article-title">{{single.title}}</p>
+            <p id="article-text">{{single.content}}</p>
+        </div>
+
+        <p id="a-title">Panašūs straipsniai</p>
+
+        <div class="relevant-articles">
+            {% for article in single_articles %}
+            {% if article.id != single.id %}
+            <a href="{% url 'single_article' article.url %}">
+                <div class="relevant-article">
+                    <div class="relevant-img" style="background-image: url('{{article.cover.url}}');"></div>
+                    <p class="relevant-date">{{article.date}}</p>
+                    <p class="relevant-title">{{article.title}}</p>
+                    <p class="relevant-text">{{article.content | truncatechars:65}}</p>
+                </div>
+            </a>
+            {% endif %}
+            {% endfor %}
+
+    </div>
+
+</section>
+
+    {% include '../base/promo.html' %}
+    {% include '../base/clients.html' %}
+
+{% endblock content %}
