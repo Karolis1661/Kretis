@@ -25,7 +25,7 @@ SECRET_KEY = 'xsk=vw+428(0t(!-292#7926ujg&&u)1&h2z4**dyum_1we5&z'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 #ALLOWED_HOSTS = []
-ALLOWED_HOSTS = ['kretis.lt']
+ALLOWED_HOSTS = ['164.90.179.225', 'kretis.lt', 'www.kretis.lt']
 
 
 # Application definition
