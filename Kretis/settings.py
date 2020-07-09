@@ -11,7 +11,6 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 """
 
 import os
-
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -25,7 +24,7 @@ SECRET_KEY = 'xsk=vw+428(0t(!-292#7926ujg&&u)1&h2z4**dyum_1we5&z'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 #ALLOWED_HOSTS = []
-ALLOWED_HOSTS = ['www.kretis.lt', 'kretis.lt']
+#ALLOWED_HOSTS = ['www.kretis.lt', 'kretis.lt']
 
 
 # Application definition
@@ -131,7 +130,7 @@ USE_TZ = True
 STATIC_URL = '/static/'
 MEDIA_URL = '/images/'
 #
-MEDIA_ROOT = os.path.join(BASE_DIR, 'main/images')
+#MEDIA_ROOT = os.path.join(BASE_DIR, 'main/images')
 STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
 
 
