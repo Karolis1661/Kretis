@@ -18,5 +18,5 @@ urlpatterns = [
     path('projektai', projects, name='projects'),
     re_path(r'projektai/(?P<client>\w+)', single_project, name='single_project'),
 ]
-urlpatterns += staticfiles_urlpatterns()
-urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+# urlpatterns += staticfiles_urlpatterns()
+# urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

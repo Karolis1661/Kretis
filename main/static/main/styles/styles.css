@@ -230,7 +230,19 @@ nav .nav-btn svg .line-top-on {
       grid-template-columns: minmax(84px, 1fr) auto minmax(84px, 1fr);
   -ms-grid-rows: minmax(70px, auto) 1fr 44px auto 44px auto 69px auto 65px auto 78px auto auto;
       grid-template-rows: minmax(70px, auto) 1fr 44px auto 44px auto 69px auto 65px auto 78px auto auto;
-      grid-template-areas: '. nav .' '. cover .' '. . .' '. landing .' '. . .' '. services .' '. . .' '. portfolio .' '. . .' '. advices .' '. . .' 'clients clients clients' '. footer .';
+      grid-template-areas: '. nav .'
+ '. cover .'
+ '. . .'
+ '. landing .'
+ '. . .'
+ '. services .'
+ '. . .'
+ '. portfolio .'
+ '. . .'
+ '. advices .'
+ '. . .'
+ 'clients clients clients'
+ '. footer .';
 }
 
 .home-section .landing {
@@ -241,7 +253,11 @@ nav .nav-btn svg .line-top-on {
   display: grid;
       grid-template-columns: auto minmax(auto, 733px);
       grid-template-rows: 102px auto 44px auto 102px;
-      grid-template-areas: ". land-img" "land-descr land-img" ". land-img" "land-btns land-img" ". land-img";
+      grid-template-areas: ". land-img"
+ "land-descr land-img"
+ ". land-img"
+ "land-btns land-img"
+ ". land-img";
 }
 
 .home-section .landing .landing-descr {
@@ -386,7 +402,11 @@ nav .nav-btn svg .line-top-on {
         grid-template-rows: 40px auto 44px auto 40px;
     -ms-grid-columns: auto minmax(auto, 733px);
         grid-template-columns: auto minmax(auto, 733px);
-        grid-template-areas: ". ." "land-descr ." ". ." "land-btns land-btns" ". .";
+        grid-template-areas: ". ."
+ "land-descr ."
+ ". ."
+ "land-btns land-btns"
+ ". .";
   }
 }
 
@@ -396,7 +416,10 @@ nav .nav-btn svg .line-top-on {
         grid-template-rows: 40px auto 44px auto;
     -ms-grid-columns: auto minmax(auto, 733px);
         grid-template-columns: auto minmax(auto, 733px);
-        grid-template-areas: ". ." "land-descr ." ". ." "land-btns land-btns";
+        grid-template-areas: ". ."
+ "land-descr ."
+ ". ."
+ "land-btns land-btns";
   }
 }
 
@@ -431,7 +454,15 @@ nav .nav-btn svg .line-top-on {
       grid-template-columns: 5px auto 5px;
   -ms-grid-rows: 50px auto 50px auto 13px auto 40px auto 64px;
       grid-template-rows: 50px auto 50px auto 13px auto 40px auto 64px;
-      grid-template-areas: '. . .'  '. service-icon .'  '. . .'  '. service-title .' '. . .' '. service-text .' '. . .' '. service-link .' '. . .';
+      grid-template-areas: '. . .' 
+ '. service-icon .' 
+ '. . .' 
+ '. service-title .'
+ '. . .'
+ '. service-text .'
+ '. . .'
+ '. service-link .'
+ '. . .';
   -webkit-box-shadow: 0 2px 15px 9px rgba(239, 239, 239, 0.5);
           box-shadow: 0 2px 15px 9px rgba(239, 239, 239, 0.5);
   border-radius: 5px;
@@ -562,7 +593,11 @@ nav .nav-btn svg .line-top-on {
       grid-template-columns: auto 1fr;
   -ms-grid-rows: 122px auto 44px auto 121px;
       grid-template-rows: 122px auto 44px auto 121px;
-      grid-template-areas: ". port-img" "port-descr port-img" ". port-img" "port-btns port-img" ". port-img";
+      grid-template-areas: ". port-img"
+ "port-descr port-img"
+ ". port-img"
+ "port-btns port-img"
+ ". port-img";
 }
 
 .home-section .portfolio .portfolio-descr {
@@ -758,7 +793,11 @@ nav .nav-btn svg .line-top-on {
         grid-template-columns: auto 1fr;
     -ms-grid-rows: auto 44px auto 50px auto;
         grid-template-rows: auto 44px auto 50px auto;
-        grid-template-areas: "port-descr ." ". ." "port-btns ." ". . " "port-img port-img";
+        grid-template-areas: "port-descr ."
+ ". ."
+ "port-btns ."
+ ". . "
+ "port-img port-img";
   }
 }
 
@@ -768,7 +807,11 @@ nav .nav-btn svg .line-top-on {
         grid-template-columns: auto 1fr;
     -ms-grid-rows: auto 44px auto 40px auto;
         grid-template-rows: auto 44px auto 40px auto;
-        grid-template-areas: "port-descr ." ". ." "port-img port-img" ". . " "port-btns port-btns";
+        grid-template-areas: "port-descr ."
+ ". ."
+ "port-img port-img"
+ ". . "
+ "port-btns port-btns";
   }
 }
 
@@ -886,7 +929,14 @@ nav .nav-btn svg .line-top-on {
   display: grid;
   -ms-grid-rows: auto 17px auto 13px auto 11px auto 43px;
       grid-template-rows: auto 17px auto 13px auto 11px auto 43px;
-      grid-template-areas: "advice-img" '.'  "advice-date" '.'  "advice-title"  "." "advice-text" ".";
+      grid-template-areas: "advice-img"
+ '.' 
+ "advice-date"
+ '.' 
+ "advice-title" 
+ "."
+ "advice-text"
+ ".";
   -webkit-box-shadow: 0 2px 15px 9px rgba(239, 239, 239, 0.5);
           box-shadow: 0 2px 15px 9px rgba(239, 239, 239, 0.5);
 }
@@ -1026,7 +1076,24 @@ nav .nav-btn svg .line-top-on {
       grid-template-columns: minmax(84px, 1fr) auto minmax(84px, 1fr);
   -ms-grid-rows: minmax(70px, auto) auto 21px auto 50px auto 45px auto 52px auto 44px auto 68px auto 44px auto auto auto;
       grid-template-rows: minmax(70px, auto) auto 21px auto 50px auto 45px auto 52px auto 44px auto 68px auto 44px auto auto auto;
-      grid-template-areas: '. nav .' '. cover .' '. . .' '. ad-url .' '. . .' 'a1 ad-landing a2' '. . .' '. ad-tools .' '. . .' '. ad-images .' '. . .' '. ad-writeup .' '. . .' '. ad-next .' '. . .' 'p1 promo p2' 'clients clients clients' '. footer .';
+      grid-template-areas: '. nav .'
+ '. cover .'
+ '. . .'
+ '. ad-url .'
+ '. . .'
+ 'a1 ad-landing a2'
+ '. . .'
+ '. ad-tools .'
+ '. . .'
+ '. ad-images .'
+ '. . .'
+ '. ad-writeup .'
+ '. . .'
+ '. ad-next .'
+ '. . .'
+ 'p1 promo p2'
+ 'clients clients clients'
+ '. footer .';
   /*----- _ATLIKTI-DARBAI_ PAGE SECTIONS -----*/
 }
 
@@ -1412,7 +1479,21 @@ nav .nav-btn svg .line-top-on {
   .atlikti-darbai-section {
     -ms-grid-rows: 70px auto auto 45px auto 52px auto 44px auto 68px auto 44px auto auto 251px;
         grid-template-rows: 70px auto auto 45px auto 52px auto 44px auto 68px auto 44px auto auto 251px;
-        grid-template-areas: '. nav .' '. cover .' 'a1 ad-landing a2' '. . .' '. ad-tools .' '. . .' '. ad-images .' '. . .' '. ad-writeup .' '. . .' '. ad-next .' '. . .' 'p1 promo p2' 'clients clients clients' '. footer .';
+        grid-template-areas: '. nav .'
+ '. cover .'
+ 'a1 ad-landing a2'
+ '. . .'
+ '. ad-tools .'
+ '. . .'
+ '. ad-images .'
+ '. . .'
+ '. ad-writeup .'
+ '. . .'
+ '. ad-next .'
+ '. . .'
+ 'p1 promo p2'
+ 'clients clients clients'
+ '. footer .';
   }
 }
 
@@ -1438,7 +1519,15 @@ nav .nav-btn svg .line-top-on {
       grid-template-columns: minmax(84px, 1fr) auto minmax(84px, 1fr);
   -ms-grid-rows: minmax(70px, auto) auto 65px auto 32px auto 38px auto auto;
       grid-template-rows: minmax(70px, auto) auto 65px auto 32px auto 38px auto auto;
-      grid-template-areas: '. nav .' '. cover .' '. . .' '. contacts .' '. . .' '. msg-form .' '. . .' 'clients clients clients' '. footer . ';
+      grid-template-areas: '. nav .'
+ '. cover .'
+ '. . .'
+ '. contacts .'
+ '. . .'
+ '. msg-form .'
+ '. . .'
+ 'clients clients clients'
+ '. footer . ';
   /*----- _CONTACTS_ PAGE SECTIONS -----*/
 }
 
@@ -1801,7 +1890,16 @@ nav .nav-btn svg .line-top-on {
       grid-template-columns: minmax(84px, 1fr) auto minmax(84px, 1fr);
   -ms-grid-rows: minmax(70px, auto) auto 44px auto 44px auto 85px auto auto auto;
       grid-template-rows: minmax(70px, auto) auto 44px auto 44px auto 85px auto auto auto;
-      grid-template-areas: '. nav .' '. cover .' '. . .' '. landing .' '. . .' '. done-projects .' '. . .' 'p1 promo p2' 'clients clients clients' '. footer .';
+      grid-template-areas: '. nav .'
+ '. cover .'
+ '. . .'
+ '. landing .'
+ '. . .'
+ '. done-projects .'
+ '. . .'
+ 'p1 promo p2'
+ 'clients clients clients'
+ '. footer .';
 }
 
 .darbai-section .landing {
@@ -1812,7 +1910,9 @@ nav .nav-btn svg .line-top-on {
   display: grid;
       grid-template-columns: auto minmax(auto, 733px);
       grid-template-rows: 102px auto 135px;
-      grid-template-areas: ". land-img" "land-descr land-img" ". land-img";
+      grid-template-areas: ". land-img"
+ "land-descr land-img"
+ ". land-img";
 }
 
 .darbai-section .landing .landing-descr {
@@ -1890,7 +1990,9 @@ nav .nav-btn svg .line-top-on {
   .darbai-section .landing {
     -ms-grid-rows: 30px auto 0;
         grid-template-rows: 30px auto 0;
-        grid-template-areas: ". land-img" "land-descr land-img" ". land-img";
+        grid-template-areas: ". land-img"
+ "land-descr land-img"
+ ". land-img";
   }
 }
 
@@ -2090,7 +2192,16 @@ nav .nav-btn svg .line-top-on {
       grid-template-columns: minmax(84px, 1fr) auto minmax(84px, 1fr);
   -ms-grid-rows: minmax(70px, auto) auto 60px auto 31px auto 60px auto auto auto;
       grid-template-rows: minmax(70px, auto) auto 60px auto 31px auto 60px auto auto auto;
-      grid-template-areas: '. nav .' '. cover .' '. . .' '. intro .' '. . .' '. calc-container .' '. . .' 'p1 promo p2' 'clients clients clients' '. footer .';
+      grid-template-areas: '. nav .'
+ '. cover .'
+ '. . .'
+ '. intro .'
+ '. . .'
+ '. calc-container .'
+ '. . .'
+ 'p1 promo p2'
+ 'clients clients clients'
+ '. footer .';
 }
 
 .calculator-section .intro {
@@ -2166,7 +2277,8 @@ nav .nav-btn svg .line-top-on {
   display: grid;
   -ms-grid-rows: auto auto;
       grid-template-rows: auto auto;
-      grid-template-areas: 'calc-type' 'calc-items';
+      grid-template-areas: 'calc-type'
+ 'calc-items';
 }
 
 .calculator-section .calc-container .calc-items {
@@ -2179,7 +2291,14 @@ nav .nav-btn svg .line-top-on {
       grid-template-columns: 28px auto 28px;
   -ms-grid-rows: 25px auto auto 18px auto 20px 45px 20px;
       grid-template-rows: 25px auto auto 18px auto 20px 45px 20px;
-      grid-template-areas: '. . .'  '. form-title .' '. calc-form .' '. . .'  '. price-output .'  '. . .'  '. redirect-btn .' '. . .';
+      grid-template-areas: '. . .' 
+ '. form-title .'
+ '. calc-form .'
+ '. . .' 
+ '. price-output .' 
+ '. . .' 
+ '. redirect-btn .'
+ '. . .';
 }
 
 .calculator-section .calc-container .m-switch {
@@ -2635,7 +2754,17 @@ nav .nav-btn svg .line-top-on {
       grid-template-columns: minmax(84px, 1fr) auto minmax(84px, 1fr);
   -ms-grid-rows: minmax(70px, auto) auto 60px auto 54px auto 54px auto 54px auto auto;
       grid-template-rows: minmax(70px, auto) auto 60px auto 54px auto 54px auto 54px auto auto;
-      grid-template-areas: '. nav .' '. cover .' '. . .' '. article-links .' '. . .' '. articles .' '. . .' '. page-btns .' '. . .' 'clients clients clients' '. footer .';
+      grid-template-areas: '. nav .'
+ '. cover .'
+ '. . .'
+ '. article-links .'
+ '. . .'
+ '. articles .'
+ '. . .'
+ '. page-btns .'
+ '. . .'
+ 'clients clients clients'
+ '. footer .';
 }
 
 .articles-section .a-intro-items {
@@ -2744,7 +2873,14 @@ nav .nav-btn svg .line-top-on {
   min-height: 399px;
   -ms-grid-rows: auto 17px auto 13px auto 11px auto 43px;
       grid-template-rows: auto 17px auto 13px auto 11px auto 43px;
-      grid-template-areas: "advice-img"  "." "advice-date"  "." "advice-title"  "." "advice-text" ".";
+      grid-template-areas: "advice-img" 
+ "."
+ "advice-date" 
+ "."
+ "advice-title" 
+ "."
+ "advice-text"
+ ".";
   -webkit-box-shadow: 0 2px 15px 9px rgba(239, 239, 239, 0.5);
           box-shadow: 0 2px 15px 9px rgba(239, 239, 239, 0.5);
 }
@@ -2916,7 +3052,14 @@ nav .nav-btn svg .line-top-on {
       grid-template-columns: minmax(84px, 1fr) auto minmax(84px, 1fr);
   -ms-grid-rows: minmax(70px, auto) auto 57px auto 75px auto auto auto;
       grid-template-rows: minmax(70px, auto) auto 57px auto 75px auto auto auto;
-      grid-template-areas: '. nav .' '. cover .' '. . .' '. article-section .' '. . .' 'p1 promo p2' 'clients clients clients' '. footer .';
+      grid-template-areas: '. nav .'
+ '. cover .'
+ '. . .'
+ '. article-section .'
+ '. . .'
+ 'p1 promo p2'
+ 'clients clients clients'
+ '. footer .';
 }
 
 .straipsnis-section .article-section {
@@ -2929,7 +3072,8 @@ nav .nav-btn svg .line-top-on {
       grid-template-columns: minmax(auto, 842px) auto;
   -ms-grid-rows: auto auto;
       grid-template-rows: auto auto;
-      grid-template-areas: 'whole-article article-title' 'whole-article relevant-articles';
+      grid-template-areas: 'whole-article article-title'
+ 'whole-article relevant-articles';
   gap: 25px;
 }
 
@@ -2947,7 +3091,14 @@ nav .nav-btn svg .line-top-on {
       grid-template-columns: minmax(28px, 37px) auto minmax(28px, 37px);
   -ms-grid-rows: auto 28px auto 28px auto 23px auto minmax(22px, 1fr);
       grid-template-rows: auto 28px auto 28px auto 23px auto minmax(22px, 1fr);
-      grid-template-areas: 'article-cover article-cover article-cover' '. . .' '. article-date .' '. . .'  '. article-title .' '. . .'  ' . article-text .' ' . . .';
+      grid-template-areas: 'article-cover article-cover article-cover'
+ '. . .'
+ '. article-date .'
+ '. . .' 
+ '. article-title .'
+ '. . .' 
+ ' . article-text .'
+ ' . . .';
 }
 
 .straipsnis-section .article-section .whole-article .whole-cover {
@@ -3013,7 +3164,14 @@ nav .nav-btn svg .line-top-on {
       grid-template-columns: minmax(16px, 18px) auto minmax(16px, 18px);
   -ms-grid-rows: auto 17px auto 13px auto 11px auto 43px;
       grid-template-rows: auto 17px auto 13px auto 11px auto 43px;
-      grid-template-areas: "relevant-img relevant-img relevant-img"  ". . ." ". relevant-date ."  ". . ." ". relevant-title ."  ". . ." ". relevant-text ." ". . .";
+      grid-template-areas: "relevant-img relevant-img relevant-img" 
+ ". . ."
+ ". relevant-date ." 
+ ". . ."
+ ". relevant-title ." 
+ ". . ."
+ ". relevant-text ."
+ ". . .";
   -webkit-box-shadow: 0 2px 15px 9px rgba(239, 239, 239, 0.5);
           box-shadow: 0 2px 15px 9px rgba(239, 239, 239, 0.5);
 }
@@ -3073,7 +3231,15 @@ nav .nav-btn svg .line-top-on {
         grid-template-columns: 28px auto 28px;
     -ms-grid-rows: 33px auto 14px auto 28px auto 23px auto minmax(22px, 1fr);
         grid-template-rows: 33px auto 14px auto 28px auto 23px auto minmax(22px, 1fr);
-        grid-template-areas: '. . .' '. article-date .' '. . .' '. article-title .'  '. . .' 'article-cover article-cover article-cover'  '. . .' ' . article-text .' ' . . .';
+        grid-template-areas: '. . .'
+ '. article-date .'
+ '. . .'
+ '. article-title .' 
+ '. . .'
+ 'article-cover article-cover article-cover' 
+ '. . .'
+ ' . article-text .'
+ ' . . .';
   }
   .straipsnis-section .article-section .whole-article .whole-cover {
     height: 276px;
@@ -3133,7 +3299,15 @@ nav .nav-btn svg .line-top-on {
         grid-template-columns: auto;
     -ms-grid-rows: 33px auto 14px auto 28px auto 23px auto minmax(22px, 1fr);
         grid-template-rows: 33px auto 14px auto 28px auto 23px auto minmax(22px, 1fr);
-        grid-template-areas: '. ' 'article-date' '.' 'article-title'  '.' 'article-cover'  '.' ' article-text' '.';
+        grid-template-areas: '. '
+ 'article-date'
+ '.'
+ 'article-title' 
+ '.'
+ 'article-cover' 
+ '.'
+ ' article-text'
+ '.';
     -webkit-box-shadow: none;
             box-shadow: none;
   }
@@ -3192,7 +3366,23 @@ nav .nav-btn svg .line-top-on {
       grid-template-columns: minmax(84px, 1fr) auto minmax(84px, 1fr);
   -ms-grid-rows: minmax(70px, auto) auto 44px auto 44px auto 69px auto 95px auto 95px auto 64px auto auto auto auto;
       grid-template-rows: minmax(70px, auto) auto 44px auto 44px auto 69px auto 95px auto 95px auto 64px auto auto auto auto;
-      grid-template-areas: '. nav .' '. cover .' '. . .' '. landing .' '. . .' '. procedures .' '. . .' '. about-1 .' '. . .' '. about-2 .' '. . .' '. about-3 .' '. . .' 'q1 questions q2 ' 'p1 promo p2' 'clients clients clients' '. footer .';
+      grid-template-areas: '. nav .'
+ '. cover .'
+ '. . .'
+ '. landing .'
+ '. . .'
+ '. procedures .'
+ '. . .'
+ '. about-1 .'
+ '. . .'
+ '. about-2 .'
+ '. . .'
+ '. about-3 .'
+ '. . .'
+ 'q1 questions q2 '
+ 'p1 promo p2'
+ 'clients clients clients'
+ '. footer .';
 }
 
 .is-section .landing {
@@ -3205,7 +3395,11 @@ nav .nav-btn svg .line-top-on {
       grid-template-columns: auto minmax(auto, 733px);
   -ms-grid-rows: 102px auto 44px auto 102px;
       grid-template-rows: 102px auto 44px auto 102px;
-      grid-template-areas: ". land-img" "land-descr land-img" ". land-img" "land-btns land-img" ". land-img";
+      grid-template-areas: ". land-img"
+ "land-descr land-img"
+ ". land-img"
+ "land-btns land-img"
+ ". land-img";
 }
 
 .is-section .landing .landing-descr {
@@ -3357,7 +3551,11 @@ nav .nav-btn svg .line-top-on {
         grid-template-rows: 40px auto 44px auto 40px;
     -ms-grid-columns: auto minmax(auto, 733px);
         grid-template-columns: auto minmax(auto, 733px);
-        grid-template-areas: ". ." "land-descr ." ". ." "land-btns land-btns" ". .";
+        grid-template-areas: ". ."
+ "land-descr ."
+ ". ."
+ "land-btns land-btns"
+ ". .";
   }
 }
 
@@ -3367,7 +3565,10 @@ nav .nav-btn svg .line-top-on {
         grid-template-rows: 40px auto 44px auto;
     -ms-grid-columns: auto minmax(auto, 733px);
         grid-template-columns: auto minmax(auto, 733px);
-        grid-template-areas: ". ." "land-descr ." ". ." "land-btns land-btns";
+        grid-template-areas: ". ."
+ "land-descr ."
+ ". ."
+ "land-btns land-btns";
   }
 }
 
@@ -3401,7 +3602,13 @@ nav .nav-btn svg .line-top-on {
   height: 312px;
   -ms-grid-rows: 49px auto 41px auto 16px auto 48px;
       grid-template-rows: 49px auto 41px auto 16px auto 48px;
-      grid-template-areas: '.'  'procedure-icon'  '.'  'procedure-title' '.' 'procedure-text' '.';
+      grid-template-areas: '.' 
+ 'procedure-icon' 
+ '.' 
+ 'procedure-title'
+ '.'
+ 'procedure-text'
+ '.';
   -webkit-box-shadow: 0 2px 15px 9px rgba(239, 239, 239, 0.5);
           box-shadow: 0 2px 15px 9px rgba(239, 239, 239, 0.5);
   border-radius: 5px;
@@ -3477,7 +3684,9 @@ nav .nav-btn svg .line-top-on {
       grid-template-columns: minmax(auto, 733px) 57px auto;
   -ms-grid-rows: 120px minmax(242px, auto) 120px;
       grid-template-rows: 120px minmax(242px, auto) 120px;
-      grid-template-areas: "about-img . ." "about-img . about-descr" "about-img . about-descr";
+      grid-template-areas: "about-img . ."
+ "about-img . about-descr"
+ "about-img . about-descr";
 }
 
 .is-section .about-1 .about-1-img {
@@ -3582,7 +3791,9 @@ nav .nav-btn svg .line-top-on {
       grid-template-columns: auto 57px minmax(auto, 733px);
   -ms-grid-rows: 120px minmax(242px, auto) 120px;
       grid-template-rows: 120px minmax(242px, auto) 120px;
-      grid-template-areas: ". . about-img2" "about-descr2 . about-img2" "about-descr2 . about-img2";
+      grid-template-areas: ". . about-img2"
+ "about-descr2 . about-img2"
+ "about-descr2 . about-img2";
 }
 
 .is-section .about-2 .about-2-img {
@@ -3687,7 +3898,9 @@ nav .nav-btn svg .line-top-on {
       grid-template-columns: minmax(auto, 733px) 57px auto;
   -ms-grid-rows: 120px minmax(242px, auto) 120px;
       grid-template-rows: 120px minmax(242px, auto) 120px;
-      grid-template-areas: "about-img3 . ." "about-img3 . about-descr3" "about-img3 . about-descr3";
+      grid-template-areas: "about-img3 . ."
+ "about-img3 . about-descr3"
+ "about-img3 . about-descr3";
 }
 
 .is-section .about-3 .about-3-img {

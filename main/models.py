@@ -67,7 +67,7 @@ class WebRequest(models.Model):
     web_locked_seo = models.BooleanField(default=True)
     web_locked_gai = models.BooleanField(default=True)
     web_pages_select = models.CharField(max_length=20, choices=WEB_PAGES,
-                                        default=WEB_PAGES[1])
+                                        default=WEB_PAGES[0], blank=True, null=True)
     web_optional_fpi = models.BooleanField(default=False)
     web_optional_pk = models.BooleanField(default=False)
     web_optional_pf = models.BooleanField(default=False)
@@ -100,7 +100,7 @@ class EshopRequest(models.Model):
 
     eshop_locked_uisd = models.BooleanField(default=True)
     eshop_tvs_choices = models.CharField(max_length=20, choices=TVS_CHOICES,
-                                         default=TVS_CHOICES[1])
+                                         default=TVS_CHOICES[0], blank=True, null=True)
     eshop_locked_tvs = models.BooleanField(default=True)
     eshop_locked_sti = models.BooleanField(default=True)
     eshop_locked_iz = models.BooleanField(default=True)
@@ -147,9 +147,9 @@ class DesignRequest(models.Model):
     design_website = models.CharField(max_length=50, blank=True)
 
     design_website_type = models.CharField(max_length=20, choices=WEBSITE_TYPE,
-                                           default=WEBSITE_TYPE[1])
+                                           default=WEBSITE_TYPE[0], blank=True, null=True)
     design_website_pages = models.CharField(max_length=20, choices=DESIGN_PAGES,
-                                            default=DESIGN_PAGES[1])
+                                            default=DESIGN_PAGES[0], blank=True, null=True)
 
     design_locked_paitn = models.BooleanField(default=True)
     design_locked_kait = models.BooleanField(default=True)
@@ -161,7 +161,7 @@ class DesignRequest(models.Model):
     design_locked_pk = models.BooleanField(default=True)
 
     design_testing_cycle = models.CharField(max_length=20, choices=TEST_CYCLES,
-                                            default=TEST_CYCLES[1])
+                                            default=TEST_CYCLES[0], blank=True, null=True)
 
     design_optional_tidt = models.BooleanField(default=False)
 
