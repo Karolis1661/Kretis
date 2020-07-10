@@ -313,6 +313,8 @@ nav {
                 grid-template-rows: 40px auto 20px auto;
             }
         }
+      
+
         .services {
             grid-area: services;
             display: grid;
@@ -324,18 +326,18 @@ nav {
                 display: grid;
                 justify-items: center;
                 text-align: center;
-                grid-template-columns: 5px auto 5px;
-                grid-template-rows: 50px auto 50px auto 13px auto 40px auto 64px;
+                //height: 350px;
+                grid-template-rows: 49px auto 41px auto 16px auto 48px auto 48px;
                 grid-template-areas: 
-                                    '. . .' 
-                                    '. service-icon .' 
-                                    '. . .' 
-                                    '. service-title .'
-                                    '. . .'
-                                    '. service-text .'
-                                    '. . .'
-                                    '. service-link .'
-                                    '. . .' ;
+                                    '.' 
+                                    'service-icon' 
+                                    '.' 
+                                    'service-title'
+                                    '.'
+                                    'service-text'
+                                    '.'
+                                    'service-link'
+                                    '.';
                 box-shadow: 0 2px 15px 9px rgba(239,239,239,0.5);
                 border-radius: 5px;
                 .service-icon {
@@ -346,14 +348,15 @@ nav {
                     grid-area: service-title;
                     font-weight: 700;
                     font-size: 20px;
-                    line-height: 24px;
+                    line-height: 24px; 
+                    
                 }
                 .service-text {
                     grid-area: service-text;
                     font-weight: 400;
                     font-size: 16px;
                     line-height: 30px;
-                    max-width: 340px;
+                    width: 300px;
                 }
                 .service-link {
                     grid-area: service-link;
@@ -369,50 +372,34 @@ nav {
                         margin-left: 5px;
                     }
                 }
-                @media screen and (max-width:1060px){
-                    .service-title {
-                        font-size: 16px;
-                        line-height: 19px;
-                    }
+            }
+            @media screen and (max-width:1460px){
+                .service {
+                    
+                    grid-template-rows: 41px auto 22px auto 13px auto 37px auto 37px;
                     .service-text {
                         font-size: 14px;
-                        line-height: 25px;
-                    }
+                    } 
                     .service-link {
                         font-size: 14px;
-                    }
-                }
-                @media screen and (max-width:750px){
-                    .service-title {
-                        font-size: 18px;
-                        line-height: 19px;
-                    }
-                }
-            }
-            @media screen and (max-width:800px){
-                .service {
-                    grid-template-rows: 40px auto 40px auto 9px auto 26px auto 39px;
-                }
-            }
-            @media screen and (max-width:450px){
-                .service {
-                    grid-template-rows: 30px auto 30px auto 13px auto 20px auto 34px;
+                    } 
                 }
             }
         }
         @media screen and (max-width:1460px){
             .services {
-                grid-template-columns: 408px 408px;
+                grid-template-columns: 339px 339px;
+                .service {
+                    .service-title{
+                        width: 300px;
+                    }
+                }
             }
         }
-        @media screen and (max-width:1060px){
-            .services {
-                grid-template-columns: 324px 324px;
-            }
-        }
-        @media screen and (max-width:755px){
+        @media screen and (max-width:780px){
             .services {
                 grid-template-columns: 324px;
+               
             }
         }
         @media screen and (max-width:340px){
