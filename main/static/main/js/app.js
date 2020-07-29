@@ -55,7 +55,7 @@ try {
     hamburgerBtn();
 }
 catch(err) {
-    console.log(err);
+    
 }
 
 function calculator() {
@@ -439,7 +439,7 @@ function calculator() {
 try {
     calculator();}
 catch(err){
-    console.log(err);
+   
 }
 
 function imageSwitcher() {
@@ -454,9 +454,14 @@ function imageSwitcher() {
     firstImage.classList.remove('display-off');
     // Remove left button
     DOM.switchToL.classList.add('display-off');
-
-    //capture current position
+    
+    // Capture current position
     current = firstImage;
+
+    // Check if there's more than 1 image, if not, hide switch to right button
+    if(current.nextElementSibling === null){
+        DOM.switchToR.classList.add('display-off');
+    }
 
     document.addEventListener('click', e =>{
         //capture left and right positions from current
@@ -471,7 +476,7 @@ function imageSwitcher() {
             if(current.previousElementSibling === null) {
                 DOM.switchToL.classList.add('display-off');
             }
-
+            
             current.classList.remove('display-off');
             current.nextElementSibling.classList.add('display-off');
         }
@@ -496,5 +501,5 @@ try {
     imageSwitcher();
 }
 catch(err){
-    console.log(err);
+    
 }
